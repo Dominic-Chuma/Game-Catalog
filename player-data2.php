@@ -21,9 +21,6 @@ $counter = 0;
 
 foreach($year as $y){
     foreach($month as $m){
-//        $d = $a ."-". $b ."-". $c;
-//        $e = settype($d, "string");
-//        $monthDay = $pdo->query("SELECT DATE_FORMAT(DATE(`date`), '%M, %Y') as Month FROM                                   `gameplays` WHERE date BETWEEN DATE('" . $y . "-0" . $m . "-0" .                            $num1 . "') and DATE('" . $y . "-0" . $m . "-0" . $num2 . "') LIMIT 1");
         
         // List of Months
         $arr = array('January 2010','February 2010','March 2010','April 2010','May 2010','June 2010','July 2010','August 2010','September 2010','October 2010','November 2010','December 2010');
