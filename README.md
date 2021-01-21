@@ -7,6 +7,8 @@ create atleast upto 1000 gameplays per day after the first year of the first set
 my laptop almost crashed, and I was also trying to make the data as realistic as possible, creating a few hundredd of 
 gameplays per day at the initial launch of the game catalog.(since the number of gamers will only increase with time).
 
+Python and a litthe javascript was used to create the data stored in the local database(during developemnt.)
+
 
 As for deployement, I was able to deploy the application on a subdomain service within my disposal. 
 The links to the APIs are as follows.
