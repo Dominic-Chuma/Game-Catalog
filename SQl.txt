@@ -1,0 +1,17 @@
+INSERT INTO `players` (`id`, `name`, `email`, `nickname`, `password`, `date-joined`, `last-login`) VALUES 
+(NULL, 'Dominc Chum', 'chum@chum.com', 'rhyster', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Do Chu', 'dom@chu.com', 'fd-dnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'Dom Chum', 'chum@chum.com', 'ryster', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'D Chu', 'do@chu.com', 'fd-dzgnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'Donc C', 'chum@chum.com', 'rhyter', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Dol Chu', 'dom@chu.com', 'fd-dafdnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'Doc Chim', 'chum@chum.com', 'rhyster', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Do Chin', 'dom@chu.com', 'fd-dnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'D Chum', 'chu@chum.com', 'yster', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'ek Chu', 'do@chu.com', 'fs^nj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'Dc Chex', 'ck@chum.com', 'rter', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Dh Chu', 'dh@chu.com', 'fd-dnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'D hum', 'hu@chum.com', 'rdr', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Do Che', 'dom@che.com', 'fdmjvnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10')),
+(NULL, 'Dominc Chum', 'chum@chum.com', 'rhyster', 'fshgjdlsdf', DATE('2010-01-01'), DATE('2020-11-11')), 
+(NULL, 'Do Chu', 'dom@chu.com', 'fd-dnj', 'shuyfoasd', DATE('2010-01-01'), DATE('2020-10-10'));

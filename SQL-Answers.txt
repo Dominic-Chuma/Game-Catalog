@@ -1,0 +1,17 @@
+﻿SQL Queries for the assignment.
+
+1. 
+
+2.
+
+3. SELECT gameplays.id, games.name, games.version, gameplays.date, players.name FROM ((games INNER JOIN gameplays ON games.id = gameplays.game_id) 
+	INNER JOIN players ON players.id = gameplays.player_id)
+
+4. SELECT gameplays.id, games.name, games.version, DATE_FORMAT(DATE(gameplays.date), '%M %D, %Y') as Date FROM games 
+	INNER JOIN gameplays ON games.id = gameplays.game_id LIMIT 3000
+
+5. SELECT players.name, DATE_FORMAT(DATE(gameplays.date), '%M %D, %Y') as Month, gameplays.player_id , COUNT(gameplays.player_id) 
+		FROM players 
+	RIGHT JOIN gameplays ON players.id = gameplays.player_id WHERE gameplays.date BETWEEN DATE('2010-01-01') and DATE('2010-01-28') 
+	GROUP BY gameplays.player_id 
+	ORDER BY COUNT(gameplays.player_id) DESC LIMIT 100

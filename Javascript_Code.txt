@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a random number.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = [];
+  for (var y=0; y<100; y++){
+  	var s = String.fromCharCode(Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32);
+    var t = String.fromCharCode(Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32,Math.ceil(Math.random() * 90) +32)
+    var q = s.concat(t);
+    console.log(q);
+    x.push(q);
+  }
+  console.log(x);
+  
+}
+</script>
+
+</body>
+</html>
