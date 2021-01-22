@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/erlimite/public_html/
+    - export DEPLOYPATH=/home/erlimite/public_html/projects
     - /bin/cp pdo.php $DEPLOYPATH
     - /bin/cp gameslist.php $DEPLOYPATH
     - /bin/cp player-data1.php $DEPLOYPATH
