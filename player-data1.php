@@ -7,35 +7,27 @@ require_once "pdo.php";
 $arr = array();
 $array = array();
 
+for($x = 1; $x <= 10007; $x++){
+    
+    $stmte = $pdo->query("SELECT player_id, player_name, game_name, COUNT(DISTINCT date) as No_Of_plays FROM (SELECT players.name AS player_name, pee.name as game_name, pee.player_id, pee.date FROM (SELECT newtable.player_id, games.name, newtable.date FROM (SELECT * FROM (SELECT `player_id`,`game_id`, `date` FROM gameplays ) as Month ORDER BY player_id) as newtable LEFT JOIN games ON games.id = newtable.game_id ORDER BY newtable.player_id) AS pee INNER JOIN players ON players.id = pee.player_id ) as final WHERE player_id = " . $x . " GROUP BY game_name ");
+    
+    $rows = $stmte->fetchAll(PDO::FETCH_ASSOC);
+    
+    if (empty($rows)){
+        continue;
+    }else{
+        array_push($array,$rows);
+    }
+    
+    
+}
 
-$stmte = $pdo->query("SELECT `id`,`name` FROM players");
-$rows = $stmte->fetchAll(PDO::FETCH_ASSOC);
+
+
 header('Content-Type:application/json');
 
-echo "A List of Players, their games and their gameplays (Overall for each game..) \n \n";
-//echo json_encode($rows, JSON_PRETTY_PRINT);
+//echo "A List of Players, their games and their gameplays (Overall for each game..) \n \n";
 
-if (empty($rows)){
-    echo "";
-}else{
-//    $array[] = $arr;
-    
-//    for ($x = 0; $x < count($rows); $x++){
-//        $rows[$x["total"]] = count($rows);
-//        echo count($rows) . "\n";
-//        $st = $pdo->query("SELECT `id`,`name` FROM players");
-//        $array[$arr["id"]] = $rows[$x["id"]];
-//        $arr[$arr["Player Name"]] = $rows[$x["name"]];
-//        foreach ($res as $key => $value){
-//            
-//            
-//        }
-//    }
-}
-foreach($rows as $result){
-//    echo $result;
-}
-
-//echo json_encode($rows, JSON_PRETTY_PRINT);
+echo json_encode($array, JSON_PRETTY_PRINT);
 
 ?>
