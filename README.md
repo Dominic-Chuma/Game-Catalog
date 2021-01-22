@@ -16,7 +16,7 @@ The links to the APIs are as follows.
 1. For a list of all the games.
 https://projects.erlimited.com.ng/APIs/gamelist.php
 
-2. To return a the players, their games and gamplays.
+2. To return a list of all participated the players, their games and the number of gamplays for each game played.
 https://projects.erlimited.com.ng/APIs/player-data1.php
 
 3. For a list of all games played per day and their players.
@@ -25,7 +25,7 @@ https://projects.erlimited.com.ng/APIs/gameplay1.php
 4. For a list of all games played within a particular date range.
 https://projects.erlimited.com.ng/APIs/gameplay2.php
 
-5. For a list of the TOP 100 gamers per month.
+5. For a list of the TOP 100 gamers per month for the duration of gameplay recorded so far.
 https://projects.erlimited.com.ng/APIs/player-data2.php
 
 NOTE: For some reason, my hosting service is having some challenge rendering my JSON data 
