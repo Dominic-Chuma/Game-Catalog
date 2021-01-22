@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/public_html/
+    - /bin/cp pdo.php $DEPLOYPATH
+    - /bin/cp gameslist.php $DEPLOYPATH
+    - /bin/cp player-data1.php $DEPLOYPATH
+    - /bin/cp gameplay1.php $DEPLOYPATH
+    - /bin/cp gameplay2.php $DEPLOYPATH
+    - /bin/cp player-data2.php $DEPLOYPATH
