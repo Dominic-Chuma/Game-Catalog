@@ -5,12 +5,6 @@ require_once "pdo.php";
 
 // initialize the JSON array variable
 
-$nonsense = array();
-$nonsense1 = array();
-$nonsense2 = array();
-$nonsense3 = array();
-$nonsense4 = array();
-
 $array = array();
 
 
