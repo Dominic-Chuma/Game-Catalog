@@ -4,8 +4,15 @@
 require_once "pdo.php";
 
 // initialize the JSON array variable
-$arr = array();
+
+$nonsense = array();
+$nonsense1 = array();
+$nonsense2 = array();
+$nonsense3 = array();
+$nonsense4 = array();
+
 $array = array();
+
 
 for($x = 1; $x <= 10007; $x++){
     
@@ -13,16 +20,56 @@ for($x = 1; $x <= 10007; $x++){
     
     $rows = $stmte->fetchAll(PDO::FETCH_ASSOC);
     
+        
     if (empty($rows)){
+        
         continue;
+        
     }else{
-        array_push($array,$rows);
+        
+        $game_stats = array();
+        $nonsense = array();
+        $arr = array();
+        
+        for ($y = 0; $y < 5; $y++){
+
+            $nonsense["game_name"] = $rows[$y]["game_name"];
+            $nonsense["No_Of_plays"] = $rows[$y]["No_Of_plays"];
+            array_push($game_stats,$nonsense);
+//            unset($nonsense);
+            continue;
+        }
+        
+//        var_dump($game_stats);
+        foreach($rows as $data){
+            
+            if (empty($arr)){
+                $arr["player_id"] = $data["player_id"];
+                $arr["player_name"] = $data["player_name"];
+                break;
+                
+            }else{
+                
+                unset($arr);
+                $arr["player_id"] = $data["player_id"];
+                $arr["player_name"] = $data["player_name"];
+                
+                break;
+            }
+            
+        }
+        
+        $arr["player_stats"] = $game_stats;
+
+        array_push($array, $arr);
+
     }
+    
     
     
 }
 
-
+//var_dump($array);
 
 header('Content-Type:application/json');
 
